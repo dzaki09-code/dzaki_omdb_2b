@@ -7,15 +7,12 @@
             <a href="index.html">OZ</a>
           </div>
           <ul class="sidebar-menu">
-            <li class="menu-header">PAGES</li>
+            <li class="menu-header">{{ __('messages.PAGES') }}</li>
             <li class="dropdown active">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-film"></i><span>Movies</span></a>
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-film"></i><span>{{ __('messages.Movies') }}</span></a>
               <ul class="dropdown-menu">
-                <li  class=active><a class="nav-link" href="{{ url('/dashboard') }}">Search Movies</a></li>
-                <li><a class="nav-link" href="{{ url('/favorit')}}">My Favorites</a></li>
+                <li  class="{{ Route::is('dashboard*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/dashboard') }}">{{ __('messages.Search Movies') }}</a></li>
+                <li  class="{{ Route::is('favorit*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/favorit')}}">{{ __('messages.My Favorites') }}</a></li>
               </ul>
             </li>
-      </div class="main-content">
-         @yield('content')
-
-      </div>
+    
