@@ -55,7 +55,7 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>{{ __('message.Register') }}</h4></div>
+              <div class="card-header"><h4>{{ __('messages.Register') }}</h4></div>
               <div class="card-body">
                 <form method="POST" action="{{ url('/register') }}">
                     @csrf
