@@ -187,7 +187,7 @@ document.querySelectorAll('.remove-favorite').forEach(function (btn) {
             cancelButtonText: 'Batal',
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`/controlpanel/favorites/${imdbId}`, {
+                fetch(`{{ url('panel control/favorites') }}/${imdbId}`, {
                     method: 'DELETE',
                     headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',
